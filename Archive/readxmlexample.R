@@ -1,0 +1,6 @@
+install.packages("xlsx")
+library("xlsx")
+rows <- (18:23)
+cols <- (7:15)
+dat <- read.xlsx("getdata_data_DATA.gov_NGAP.xlsx", sheetIndex = 1, colIndex = cols, rowIndex = rows)
+sum(dat$Zip*dat$Ext,na.rm=T)
